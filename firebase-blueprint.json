@@ -1,0 +1,70 @@
+{
+  "entities": {
+    "ForensicCase": {
+      "title": "Forensic Case",
+      "description": "Details of a forensic investigation case",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "location": { "type": "string" },
+        "time": { "type": "string" },
+        "crimeType": { "type": "string" },
+        "status": { "type": "string", "enum": ["Real", "Tampered"] },
+        "date": { "type": "string" },
+        "confidence": { "type": "number" },
+        "description": { "type": "string" },
+        "elaImage": { "type": "string" },
+        "integrityScore": { "type": "number" },
+        "riskLevel": { "type": "string", "enum": ["Low", "Medium", "High"] },
+        "confidenceBreakdown": {
+          "type": "object",
+          "properties": {
+            "ela": { "type": "number" },
+            "brightness": { "type": "number" },
+            "contrast": { "type": "number" }
+          }
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "resolution": { "type": "string" },
+            "format": { "type": "string" },
+            "size": { "type": "string" }
+          }
+        },
+        "chainOfCustody": {
+          "type": "object",
+          "properties": {
+            "createdTime": { "type": "string" },
+            "analysisTime": { "type": "string" },
+            "actions": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "createdBy": { "type": "string" }
+      },
+      "required": ["location", "time", "crimeType", "status", "date", "confidence", "integrityScore", "riskLevel", "createdBy"]
+    },
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Public profile of a forensic investigator",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "role": { "type": "string" },
+        "agency": { "type": "string" },
+        "badgeNumber": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/cases/{caseId}": {
+      "schema": "ForensicCase",
+      "description": "Collection of all forensic cases"
+    },
+    "/users/{userId}/profile": {
+      "schema": "UserProfile",
+      "description": "Global user profiles"
+    }
+  }
+}

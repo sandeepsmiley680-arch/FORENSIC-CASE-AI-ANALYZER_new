@@ -1,0 +1,5 @@
+{
+  "name": "Forensic AI Case Analyzer_1.0",
+  "description": "A professional forensic investigation system that analyzes digital evidence, generates structured reports, and identifies similar past cases using contextual similarity.",
+  "requestFramePermissions": []
+}
