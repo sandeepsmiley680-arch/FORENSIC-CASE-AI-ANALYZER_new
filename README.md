@@ -18,3 +18,4 @@ View your app in AI Studio: https://ai.studio/apps/fb3ec5f7-8453-41db-af18-3a395
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+# FORENSIC-CASE-AI-ANALYZER_new
