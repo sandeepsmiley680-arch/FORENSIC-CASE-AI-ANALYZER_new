@@ -29,6 +29,17 @@ This project demonstrates the application of Artificial Intelligence, Computer V
 
 ---
 
+## Screenshots
+
+![Login Page](loginpage.jpeg)
+![Dashboard](Dashboard.jpeg)
+![Comparison](comparison.jpeg)
+![Analysis](analysis.jpeg)
+![Screenshot](screenshot.png)
+
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Frontend
